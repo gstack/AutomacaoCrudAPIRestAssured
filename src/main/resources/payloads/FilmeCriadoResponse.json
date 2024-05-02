@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "codigo",
+    "nome",
+    "sinopse",
+    "faixaEtaria",
+    "genero"
+  ],
+  "properties": {
+    "codigo": {
+      "type": "integer",
+      "default": 0,
+      "title": "The codigo Schema",
+      "examples": [
+        4
+      ]
+    },
+    "nome": {
+      "type": "string",
+      "default": "",
+      "title": "The nome Schema",
+      "examples": [
+        "Renato Barros"
+      ]
+    },
+    "sinopse": {
+      "type": "string",
+      "default": "",
+      "title": "The sinopse Schema",
+      "examples": [
+        "Create Teste Integrado end to end QA Post"
+      ]
+    },
+    "faixaEtaria": {
+      "type": "integer",
+      "default": 0,
+      "title": "The faixaEtaria Schema",
+      "examples": [
+        16
+      ]
+    },
+    "genero": {
+      "type": "string",
+      "default": "",
+      "title": "The genero Schema",
+      "examples": [
+        "Drama"
+      ]
+    }
+  },
+  "examples": [{
+    "codigo": 4,
+    "nome": "Renato Barros",
+    "sinopse": "Create Teste Integrado end to end QA Post",
+    "faixaEtaria": 16,
+    "genero": "Drama"
+  }]
+}
