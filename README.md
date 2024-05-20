@@ -41,4 +41,4 @@ Contribuições são sempre bem-vindas! Por favor, pode enviar seu arquivo e sug
 
 ## Licença
 
-Este projeto é uma contribuição livre para todo e qualquer QA que deseje utiza-lo! Encorajo-os fortemente a testarem seus conhecimentos em Orientação a Objetos exemplificada no padrão de Projetos Page Object Model.
+Este projeto é uma contribuição livre para todo e qualquer QA que deseje utilizá-lo! Encorajo-os fortemente a testarem seus conhecimentos em Orientação a Objetos exemplificada no padrão de Projetos Page Object Model que guiou essa implementação.
