@@ -4,7 +4,7 @@ public class Enviromments {
     public static String getEnvironments(){
         String environments = System.getProperty("environment");
         if (environments == null) {
-            environments = "local";
+            environments = "catApi";
         }
         return environments;
     }

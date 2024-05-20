@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "message",
+    "id",
+    "image_id",
+    "sub_id",
+    "value"
+  ],
+  "properties": {
+    "message": {
+      "type": "string",
+      "default": "",
+      "title": "The message Schema"
+    },
+    "id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The id Schema"
+    },
+    "image_id": {
+      "type": "string",
+      "default": "",
+      "title": "The image_id Schema"
+    },
+    "sub_id": {
+      "type": "string",
+      "default": "",
+      "title": "The sub_id Schema"
+    },
+    "value": {
+      "type": "integer",
+      "default": 0,
+      "title": "The value Schema"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "image_id": {
+      "type": "string"
+    },
+    "sub_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "image": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "width": {
+          "type": "integer"
+        },
+        "height": {
+          "type": "integer"
+        }
+      },
+      "required": ["url", "width", "height"]
+    }
+  },
+  "required": ["id", "user_id", "image_id", "sub_id", "created_at", "value", "country_code", "image"]
+}

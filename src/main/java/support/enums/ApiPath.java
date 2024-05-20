@@ -9,7 +9,10 @@ public enum ApiPath {
 
     PATH_PATCH_FILME("/filme/"),
 
-    PATH_DELETE_FILME("/filme/4");
+    PATH_DELETE_FILME("/filme/4"),
+    PATH_API_CAT("/v1/votes"),
+    PATH_API_CAT_GETID("/v1/votes/"),
+    PATH_CAT_STUB("/catsficticios/");
     private String path;
     ApiPath(String path){
         this.path=path;
