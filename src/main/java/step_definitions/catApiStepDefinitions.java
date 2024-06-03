@@ -68,4 +68,22 @@ public class catApiStepDefinitions {
 
     }
 
+    @Quando("envio post catApi sem corpo")
+    public static String envio_post_cat_api_sem_corpo() {
+       catApiService.enviarPostSemBody();
+       return Response;
+    }
+    @Então("verifico se a API retorna erro de requisição inválida")
+    public void verifico_se_a_api_retorna_erro_de_requisição_inválida() {
+        catApiService.ValidarResponsePostSemBody();
+    }
+
+    @Quando("envio post catApi com corpo vazio")
+    public static String envio_post_cat_api_com_corpo_vazio() {
+        catApiService.ValidarResponsePostBodyVazio();
+        return Response;
+    }
+
+
+
 }

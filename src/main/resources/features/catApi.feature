@@ -31,12 +31,17 @@ Funcionalidade: Testar API dos Gatos
     Quando envio put por id especifico na catApi
     Então verifico se o registro foi atualizado conforme esperado
 
-    #05/19/24 começamos aqui
-#  @catApi
-#  Cenário: Enviar POST sem corpo de requisição
-#    Dado que envio request sem corpo
-#    Quando envio post catApi sem corpo
-#    Então verifico se a API retorna erro de requisição inválida
+  @catApi
+  Cenário: Enviar POST sem corpo de requisição
+    Dado que envio request
+    Quando envio post catApi sem corpo
+    Então verifico se a API retorna erro de requisição inválida
+
+  @catApi
+  Cenário: Enviar POST com corpo da requisição vazio
+    Dado que envio request
+    Quando envio post catApi com corpo vazio
+    Então verifico se a API retorna erro de requisição inválida
 #
 #  @catApi
 #  Cenário: Enviar GET para um ID que não existe

@@ -17,6 +17,7 @@ import java.util.Map;
 
 import static io.cucumber.messages.internal.com.google.gson.JsonParser.parseString;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
+import static org.hamcrest.Matchers.equalTo;
 
 public class catApiService {
     private static String ResponseCat;
@@ -193,5 +194,38 @@ public class catApiService {
         Response response = RestContext.getResponse();
         response.then().statusCode(404);
         response.print();
+    }
+
+    public static String enviarPostSemBody() {
+        RestContext.initRequest();
+        RestContext.setPath(ApiBaseUri.API_CAT.getPath(), ApiPath.PATH_API_CAT.getPath());
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        headers.put("x-api-key", "live_4KymEb4IPbxX6a6IhzdRwbc5SciTRhnEG9HbHfOHv41vQPGhL4PTuFCvTuJocdU2");
+        RestContext.setHeader(headers);
+        RestContext.postRequest();
+        ResponseCat = RestContext.getResponse().getBody().asString();
+        return ResponseCat;
+
+    }
+
+    public static void ValidarResponsePostSemBody() {
+        Response response = RestContext.getResponse();
+        response.then().body( equalTo("\"image_id\" is required"));
+        response.print();
+    }
+
+    public static String ValidarResponsePostBodyVazio() {
+        RestContext.initRequest();
+        RestContext.setPath(ApiBaseUri.API_CAT.getPath(), ApiPath.PATH_API_CAT.getPath());
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Content-Type", "application/json");
+        headers.put("x-api-key", "live_4KymEb4IPbxX6a6IhzdRwbc5SciTRhnEG9HbHfOHv41vQPGhL4PTuFCvTuJocdU2");
+        RestContext.setHeader(headers);
+        RestContext.setBody("");
+        RestContext.postRequest();
+        ResponseCat = RestContext.getResponse().getBody().asString();
+        return ResponseCat;
+
     }
 }
